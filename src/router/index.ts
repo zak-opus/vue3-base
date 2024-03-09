@@ -47,7 +47,7 @@ const router = createRouter({
       component: () => import('@/views/error/404.vue'),
     },
   ],
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior(_to, _from, savedPosition) {
     // 返回 savedPosition 或新的位置
     if (savedPosition) {
       return savedPosition

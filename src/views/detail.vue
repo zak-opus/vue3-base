@@ -29,15 +29,22 @@
         ><svg-icon :icon-class="item"></svg-icon
       ></el-link>
     </div>
+    <div>{{ array }}</div>
   </div>
 </template>
 
 <script setup name="Detail" lang="ts">
+import { reverse } from 'lodash-es'
 import type { FormInstance, FormRules } from 'element-plus'
 interface RuleForm {
   address: string
   time: string
 }
+let array = ref([1, 2, 3])
+onMounted(() => {
+  reverse(array.value)
+})
+
 // 表单数据
 const formRef = ref<FormInstance>()
 const formData = ref<RuleForm>({

@@ -57,13 +57,16 @@ export default defineConfig(({ mode, command }) => {
       cssCodeSplit: true,
       rollupOptions: {
         output: {
+          // chunkFileNames: 'static/js/[name]-[hash].js',
+          // entryFileNames: 'static/js/entry-[hash].js',
+          // assetFileNames: 'static/[ext]/[name]-[hash].[ext]',
           manualChunks(id) {
             if (id.includes('node_modules')) {
               return 'vendor'
             }
           },
         },
-      }
+      },
     },
   }
 })

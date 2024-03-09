@@ -9,7 +9,7 @@ import createSetupExtend from './setup-extend'
 // 用于支持svg组件
 import createSvgIcon from './svg-icon'
 // 生成打包报告
-// import { visualizer } from 'rollup-plugin-visualizer'
+import { visualizer } from 'rollup-plugin-visualizer'
 // ts语法检查，报错直接在浏览器提示
 // import checker from 'vite-plugin-checker'
 // 开发环境 electron 插件
@@ -22,7 +22,7 @@ import createSvgIcon from './svg-icon'
 export default function createVitePlugins(viteEnv, isBuild = false) {
   const vitePlugins = [
     vue(),
-    // visualizer(),
+    visualizer(),
     // checker({
     //   typescript: true,
     //   vueTsc: true,
