@@ -15,15 +15,20 @@
         <el-button type="primary" @click="submitForm"
           ><svg-icon icon-class="search"></svg-icon>查询</el-button
         >
-        <el-button @click="resetForm" icon="Refresh">Reset</el-button>
+        <el-button @click="resetForm" icon="Refresh">重置</el-button>
       </el-form-item>
     </el-form>
-    <div><svg-icon icon-class="code"></svg-icon>详情页面</div>
-    <div>点击复制，将复制该文本：{{ str }}</div>
-    <el-link :underline="false" icon="DocumentCopy" v-copyText="str"
-      >复制</el-link
-    >
-    <div></div>
+    <el-divider />
+    <div>
+      这里是一些svg图标：
+      <el-link
+        :underline="false"
+        v-for="(item, index) in svgList"
+        :key="index"
+        v-copyText="`<svg-icon icon-class='${item}'></svg-icon>`"
+        ><svg-icon :icon-class="item"></svg-icon
+      ></el-link>
+    </div>
   </div>
 </template>
 
@@ -65,7 +70,8 @@ function submitForm() {
 function resetForm() {
   formRef.value?.resetFields()
 }
-const str = ref('adsad')
+// 图标区域
+const svgList = ref(['search', 'edit', '404'])
 </script>
 
 <style lang="scss" scoped>
