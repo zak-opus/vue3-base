@@ -1,0 +1,4 @@
+# 因为.eslintrc.js 会对eslint插件直接生效，而检查的排除文件在webpack插件中配置，在这里不生效，所以需要此文件来忽略不需要检查的js文件
+
+dist
+src/assets

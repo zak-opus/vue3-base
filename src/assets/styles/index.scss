@@ -1,0 +1,27 @@
+@import './transition.scss';
+
+:root {
+  /* 开启跟随系统主题默认配色，使用elementplus样式会覆盖，所以不需要写 */
+  /* color-scheme: light dark; */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--el-text-color-primary);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body,
+#app {
+  height: 100%;
+  overflow: hidden;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    background-color: #f6f6f6;
+  }
+}

@@ -1,0 +1,38 @@
+import '@/assets/styles/index.scss' // 全局样式
+import App from './App.vue'
+
+import store from './store'
+import router from './router'
+
+// 引入第三方组件库
+import ElementPlus from 'element-plus'
+import zhCn from 'element-plus/dist/locale/zh-cn.mjs'// 中文语言
+import 'element-plus/dist/index.css'
+import 'element-plus/theme-chalk/dark/css-vars.css' // 暗黑主题变量
+
+// svg图标
+import 'virtual:svg-icons-register'
+import SvgIcon from '@/components/SvgIcon/index.vue'
+import elementIcons from '@/components/SvgIcon/svgicon'
+
+// 引入自定义插件
+import plugins from './plugins'
+// 自定义指令
+import directive from './directive'
+
+const app = createApp(App)
+
+// 使用element-plus 并且设置全局的大小
+app.use(ElementPlus, {
+  locale: zhCn,
+  // 支持 large、default、small
+  size: 'small',
+})
+app.use(store)
+app.use(router)
+app.use(plugins)
+app.use(directive)
+app.use(elementIcons)
+app.component('svg-icon', SvgIcon)
+
+app.mount('#app')
