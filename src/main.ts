@@ -5,9 +5,8 @@ import store from './store'
 import router from './router'
 
 // 引入第三方组件库
-import ElementPlus from 'element-plus'
-import zhCn from 'element-plus/dist/locale/zh-cn.mjs'// 中文语言
-import 'element-plus/dist/index.css'
+// import ElementPlus from 'element-plus'
+// import 'element-plus/dist/index.css'
 import 'element-plus/theme-chalk/dark/css-vars.css' // 暗黑主题变量
 
 // svg图标
@@ -22,12 +21,7 @@ import directive from './directive'
 
 const app = createApp(App)
 
-// 使用element-plus 并且设置全局的大小
-app.use(ElementPlus, {
-  locale: zhCn,
-  // 支持 large、default、small
-  size: 'small',
-})
+// app.use(ElementPlus)
 app.use(store)
 app.use(router)
 app.use(plugins)
