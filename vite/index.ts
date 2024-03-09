@@ -28,8 +28,8 @@ export default function createVitePlugins(viteEnv, isBuild = false) {
     //   vueTsc: true,
     // }),
   ]
-  vitePlugins.push(createAutoImport())
-  vitePlugins.push(createComponents())
+  vitePlugins.push(createAutoImport(isBuild))
+  vitePlugins.push(createComponents(isBuild))
   // vitePlugins.push(electronPluginDev())
   // vitePlugins.push(electronPluginBuild())
   vitePlugins.push(createSetupExtend())
