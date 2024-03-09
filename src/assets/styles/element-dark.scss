@@ -1,0 +1,8 @@
+// 引入主题变量
+@use "./element-theme.scss" as *;
+// 暗黑模式
+@use "element-plus/theme-chalk/src/dark/css-vars.scss" as *;
+
+// 生产环境下采用preprocessorOptions按需导入
+// 开发环境下，为防止卡顿，导入所有样式:
+@use "element-plus/theme-chalk/src/index.scss" as *;

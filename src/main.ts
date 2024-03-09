@@ -1,13 +1,9 @@
-import '@/assets/styles/index.scss' // 全局样式
+// 全局样式、element主题样式
+import '@/assets/styles/index.scss'
 import App from './App.vue'
 
 import store from './store'
 import router from './router'
-
-// 引入第三方组件库
-// 开发环境引入全部样式
-import 'element-plus/dist/index.css'
-import 'element-plus/theme-chalk/dark/css-vars.css' // 暗黑主题变量
 
 // svg图标
 import 'virtual:svg-icons-register'

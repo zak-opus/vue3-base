@@ -51,6 +51,12 @@ export default defineConfig(({ mode, command }) => {
           },
         ],
       },
+      preprocessorOptions: {
+        scss: {
+          // 向全局sass文件中导入元素主题变量，@use方式不会重复
+          additionalData: `@use "@/assets/styles/element-theme.scss" as *;`,
+        },
+      },
     },
     build: {
       // outDir: 'dist/dcp',
