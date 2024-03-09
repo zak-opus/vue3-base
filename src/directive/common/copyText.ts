@@ -1,4 +1,3 @@
-import { ElMessage } from 'element-plus'
 import { DirectiveBinding } from 'vue'
 
 export default {

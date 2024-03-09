@@ -1,7 +1,8 @@
 import Components from 'unplugin-vue-components/vite'
+// 自动导入ele组件
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
-export default function createAutoComponents() {
+export default function createComponents() {
   return Components({
     resolvers: [ElementPlusResolver()],
     // 指定声明文件目录

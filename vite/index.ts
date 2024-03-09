@@ -1,6 +1,7 @@
 import vue from '@vitejs/plugin-vue'
 
 import createAutoImport from './auto-import'
+import createComponents from './auto-components'
 // 生成打包报告
 // import { visualizer } from 'rollup-plugin-visualizer'
 // ts语法检查，报错直接在浏览器提示
@@ -26,6 +27,7 @@ export default function createVitePlugins(viteEnv, isBuild = false) {
     // }),
   ]
   vitePlugins.push(createAutoImport())
+  vitePlugins.push(createComponents())
   // vitePlugins.push(electronPluginDev())
   // vitePlugins.push(electronPluginBuild())
   vitePlugins.push(createSetupExtend())
