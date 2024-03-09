@@ -24,3 +24,12 @@ npm run dev
 npm run build
 ```
 
+### 主要功能
+
++ vue全家桶配置：vue@3.4.15、vue-router4、pinia2
++ elementplus 组件库自动导入、elementplus图标采用全部注册；
+
++ 自定义插件：加载中提示插件、自定义指令：复制`v-copyText`
++ vite 插件：自动导入（框架api、elementplus组件 与 API函数、自定义组件）、svg图标组件化、打包分析报告、组件支持name
++ 生产环境按需导入elementplus样式、开发环境采用全部引入样式防止卡顿；
++ 暗黑模式、自定义elementplus主题
