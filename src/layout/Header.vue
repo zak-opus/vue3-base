@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    当前系统主题：{{ isDark ? '深色' : '浅色' }}
+    <div>当前系统主题：{{ isDark ? '深色' : '浅色' }}</div>
     <div>
       <el-link type="primary" @click="jumpPath('/testNav')">导航测试</el-link> |
       <el-link type="primary" @click="jumpPath('/testUse')">功能测试</el-link>

@@ -26,7 +26,6 @@ import Footer from './Footer.vue'
 
 <style lang="scss" scoped>
 .layout {
-  /* margin: 20px; */
   height: 100%;
 }
 </style>

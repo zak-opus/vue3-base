@@ -1,4 +1,4 @@
-// 全局样式、element主题样式
+// 全局样式、element主题样式、第三方初始化样式
 import '@/assets/styles/index.scss'
 import App from './App.vue'
 

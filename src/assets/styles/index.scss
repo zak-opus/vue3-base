@@ -1,6 +1,6 @@
 @import './transition.scss';
 @import './element-dark.scss';
-
+@import 'reset.css';
 :root {
   /* 开启跟随系统主题默认配色，使用elementplus样式会覆盖，所以不需要写 */
   /* color-scheme: light dark; */
@@ -13,17 +13,18 @@
 html:not(.dark) {
   background-color: #f6f6f6;
 }
-* {
-  margin: 0;
-  padding: 0;
-}
+
 html,
 body,
 #app {
   height: 100%;
   overflow: hidden;
+  box-sizing: border-box;
 }
-// 监听系统主题变化，这里不用，监听html是否有类名dark
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+// 监听系统主题变化，这里不用，监听html是否有类名dark即可
 // @media (prefers-color-scheme: light) {
 //   :root {
 //     background-color: #f6f6f6;
