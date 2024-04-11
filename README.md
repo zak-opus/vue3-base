@@ -1,5 +1,8 @@
 # Vue 3 + TypeScript + Vite
 
+## 线上预览
+
+[vue3-base 系统演示](http://39.107.60.116:8080/vue3-base/)
 
 ## 介绍
 

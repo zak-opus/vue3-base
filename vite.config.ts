@@ -8,7 +8,7 @@ export default defineConfig(({ mode, command }) => {
   return {
     // 部署生产环境和开发环境下的URL
     // base: VITE_APP_ENV === 'production' ? '/dcp/' : '/',
-    base: '/',
+    base: '/vue3-base/',
     plugins: createVitePlugins(env, command === 'build'),
     resolve: {
       alias: {
