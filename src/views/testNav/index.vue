@@ -1,11 +1,11 @@
 <template>
-  <div class="queryMenu">
+  <div class="testNav">
     <Sidebar></Sidebar>
     <div class="content">
-      <router-view v-slot="{ Component, route }">
+      <router-view v-slot="{ Component }">
         <transition name="fade-transform" mode="out-in">
           <keep-alive>
-            <component :is="Component" :key="route.path" />
+            <component :is="Component"/>
           </keep-alive>
         </transition>
       </router-view>
@@ -13,13 +13,12 @@
   </div>
 </template>
 
-<script setup name="QueryMenu" lang="ts">
+<script setup name="TestNav" lang="ts">
 import Sidebar from './sidebar.vue'
-console.log('创建首页')
 </script>
 
 <style lang="scss" scoped>
-.queryMenu {
+.testNav {
   display: flex;
   .content {
     flex: 1;

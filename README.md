@@ -3,7 +3,9 @@
 
 ## 介绍
 
-基于vue3、vue-router4、pinia+ts+vite+elementplus 搭建的pc端项目基座，包含自定义指令|插件、svg图标使用、暗黑主题、vite常用插件等;
+基于 vue3、vue-router4、pinia+ts+vite+elementplus 搭建的pc端项目基座，包含自定义指令|插件、svg图标使用、暗黑主题、vite常用插件等;
+不定期更新！！
+本项目也是参考了一些其他开源项目，加以借鉴修改，供大家学习参考，欢迎star！！
 
 ### 常用命令
 

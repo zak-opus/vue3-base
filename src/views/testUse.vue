@@ -33,7 +33,7 @@
   </div>
 </template>
 
-<script setup name="Detail" lang="ts">
+<script setup name="TestUse" lang="ts">
 import { reverse } from 'lodash-es'
 import type { FormInstance, FormRules } from 'element-plus'
 interface RuleForm {

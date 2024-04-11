@@ -6,34 +6,31 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
-      path: '',
+      path: '/',
       component: Layout,
-      redirect: '/detail',
+      redirect: '/testUse',
       children: [
         {
-          path: '/queryMenu',
-          component: () => import('@/views/queryMenu/index.vue'),
-          name: 'QueryMenu',
-          meta: { title: '查询栏目' },
-          redirect: '/queryMenu/prodType',
+          path: 'testNav',
+          component: () => import('@/views/testNav/index.vue'),
+          name: 'TestNav',
+          meta: { title: '菜单测试' },
+          redirect: '/testNav/prodType',
           children: [
             {
-              path: '/queryMenu/prodType',
+              path: 'prodType',
               component: () =>
-                import('@/views/queryMenu/menus/prodType/index.vue'),
+                import('@/views/testNav/menus/prodType/index.vue'),
               name: 'ProdType',
               meta: { title: '产品类型' },
             },
           ],
         },
         {
-          path: '/detail',
-          name: 'Detail',
-          // route level code-splitting
-          // this generates a separate chunk (About.[hash].js) for this route
-          // which is lazy-loaded when the route is visited.
-          component: () => import('../views/detail.vue'),
-          meta: { title: '测试' },
+          path: 'testUse',
+          name: 'TestUse',
+          component: () => import('../views/testUse.vue'),
+          meta: { title: '功能测试' },
         },
       ],
     },

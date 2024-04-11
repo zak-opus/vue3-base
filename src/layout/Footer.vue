@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">©版权所有：中央国债登记结算有限责任公司</div>
+  <div class="footer">©版权所有：zak-opus</div>
 </template>
 
 <script setup name="Footer" lang="ts"></script>

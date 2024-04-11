@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar">
-    <router-link :to="'/login'">使用已有账户登录</router-link>
+    <router-link to="/testNav/prodType">产品类型</router-link>
   </div>
 </template>
 
