@@ -12,7 +12,7 @@ const router = createRouter({
       children: [
         {
           path: 'testNav',
-          component: () => import('@/views/testNav/index.vue'),
+          component: () => import('@/views/testNav/TestNav.vue'),
           name: 'TestNav',
           meta: { title: '菜单测试' },
           redirect: '/testNav/prodType',
@@ -20,7 +20,7 @@ const router = createRouter({
             {
               path: 'prodType',
               component: () =>
-                import('@/views/testNav/menus/prodType/index.vue'),
+                import('@/views/testNav/menus/ProdType.vue'),
               name: 'ProdType',
               meta: { title: '产品类型' },
             },
@@ -29,7 +29,7 @@ const router = createRouter({
         {
           path: 'testUse',
           name: 'TestUse',
-          component: () => import('../views/testUse.vue'),
+          component: () => import('../views/TestUse.vue'),
           meta: { title: '功能测试' },
         },
       ],

@@ -38,3 +38,21 @@ npm run build
 + vite 插件：自动导入（框架api、elementplus组件 与 API函数、自定义组件）、svg图标组件化、打包分析报告、组件支持name
 + 生产环境按需导入elementplus样式、开发环境采用全部引入样式防止卡顿；
 + 暗黑模式、自定义elementplus主题
+
+
+
+### 更新日志
+
+#### 20240413
+
+1、关于`views`目录下业务组件名的统一修改；
+
+>  将组件文件名改为大驼峰，这样可以不用在路由组件中声明`name`，不适用`index.vue`以便于方便确认打印信息所在组件；
+>
+> 补充：在组合式API编写组件时，要给组件添加name，有两种方式：通过第三方插件`如：vite-plugin-vue-setup-extend`；使用官方新API`defineOptions()`，仅支持 Vue 3.3+
+
+```
+摘官方文档：在 3.2.34 或以上的版本中，使用 <script setup> 的单文件组件会自动根据文件名生成对应的 name 选项，即使是在配合 <KeepAlive> 使用时也无需再手动声明。
+```
+
+2、

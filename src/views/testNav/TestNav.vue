@@ -13,8 +13,9 @@
   </div>
 </template>
 
-<script setup name="TestNav" lang="ts">
-import Sidebar from './sidebar.vue'
+<script setup lang="ts">
+import Sidebar from './Sidebar.vue';
+console.log('testNav');
 </script>
 
 <style lang="scss" scoped>

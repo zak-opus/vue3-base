@@ -1,5 +1,5 @@
 <template>
-  <div class="detail">
+  <div class="testUse">
     <el-form ref="formRef" :model="formData" :rules="rules" inline>
       <el-form-item label="地址" prop="address">
         <el-input v-model="formData.address" />
@@ -36,6 +36,8 @@
 <script setup name="TestUse" lang="ts">
 import { reverse } from 'lodash-es'
 import type { FormInstance, FormRules } from 'element-plus'
+console.log('testUse');
+
 interface RuleForm {
   address: string
   time: string
@@ -82,7 +84,7 @@ const svgList = ref(['search', 'edit', '404'])
 </script>
 
 <style lang="scss" scoped>
-.detail {
+.testUse {
   margin: 10px;
   padding: 20px;
   background-color: var(--el-bg-color);
