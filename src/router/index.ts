@@ -15,14 +15,19 @@ const router = createRouter({
           component: () => import('@/views/testNav/TestNav.vue'),
           name: 'TestNav',
           meta: { title: '菜单测试' },
-          redirect: '/testNav/prodType',
+          redirect: '/testNav/menuOne',
           children: [
             {
-              path: 'prodType',
-              component: () =>
-                import('@/views/testNav/menus/ProdType.vue'),
-              name: 'ProdType',
-              meta: { title: '产品类型' },
+              path: 'menuOne',
+              component: () => import('@/views/testNav/menus/MenuOne.vue'),
+              name: 'MenuOne',
+              meta: { title: '页面1' },
+            },
+            {
+              path: 'menuTwo',
+              component: () => import('@/views/testNav/menus/MenuTwo.vue'),
+              name: 'MenuTwo',
+              meta: { title: '页面2' },
             },
           ],
         },

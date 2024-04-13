@@ -1,10 +1,27 @@
 <template>
   <div class="sidebar">
-    <router-link to="/testNav/prodType">产品类型</router-link>
+    <el-menu default-active="/testNav/menuOne" router>
+      <el-sub-menu index="testNav">
+        <template #title>
+          <el-icon><location /></el-icon>
+          <span>二级菜单</span>
+        </template>
+        <el-menu-item-group title="分组">
+          <el-menu-item index="/testNav/menuOne">页面1</el-menu-item>
+          <el-menu-item index="/testNav/menuTwo">页面2</el-menu-item>
+        </el-menu-item-group>
+      </el-sub-menu>
+    </el-menu>
   </div>
 </template>
 
-<script setup lang='ts' >
-</script>
+<script setup lang="ts"></script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.sidebar {
+  min-width: 220px;
+  max-width: 280px;
+  resize: horizontal;
+  overflow: auto;
+}
+</style>
