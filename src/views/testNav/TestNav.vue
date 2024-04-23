@@ -9,6 +9,7 @@
           </keep-alive>
         </transition>
       </router-view>
+      <Footer></Footer>
     </div>
   </div>
 </template>
@@ -16,6 +17,7 @@
 <script setup lang="ts">
 import { useElementSize } from '@vueuse/core'
 import Sidebar from './Sidebar.vue'
+import Footer from './Footer.vue'
 const sidebarRef = ref(null)
 const { width: sidebarWidth } = useElementSize(sidebarRef)
 
@@ -25,10 +27,11 @@ console.log('testNav')
 <style lang="scss" scoped>
 .testNav {
   display: flex;
+  height: 100%;
   .content {
     flex: 1;
     padding: 10px;
-    overflow-y: auto;
+    overflow: auto;
   }
 }
 </style>

@@ -1,13 +1,15 @@
 <template>
-  <div class="footer">©版权所有：zak-opus</div>
+  <footer>©版权所有：zak-opus</footer>
 </template>
 
 <script setup name="Footer" lang="ts"></script>
 
 <style lang="scss" scoped>
-.footer {
+footer {
+  height: 56px;
+  line-height: 55px;
   text-align: center;
-  padding: 50px 20px;
   color: var(--el-color-info);
+  border-top: 1px solid var(--el-border-color);
 }
 </style>

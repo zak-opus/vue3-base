@@ -1,11 +1,11 @@
 <template>
-  <div class="header">
+  <header>
     <div>当前系统主题：{{ isDark ? '深色' : '浅色' }}</div>
     <div>
       <el-link type="primary" @click="jumpPath('/testNav')">导航测试</el-link> |
       <el-link type="primary" @click="jumpPath('/testUse')">功能测试</el-link>
     </div>
-  </div>
+  </header>
 </template>
 
 <script setup name="Header" lang="ts">
@@ -34,15 +34,16 @@ function jumpPath(path: string) {
 </script>
 
 <style lang="scss" scoped>
-.header {
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-  z-index: 1;
   padding: 0 20px;
   height: 64px;
-  border: 1px solid var(--el-border-color);
+  border-bottom: 1px solid var(--el-border-color);
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.15);
   font-size: 18px;
   text-align: center;
