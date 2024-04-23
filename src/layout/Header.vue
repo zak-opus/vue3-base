@@ -38,11 +38,14 @@ function jumpPath(path: string) {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 1;
   padding: 0 20px;
   height: 64px;
+  border: 1px solid var(--el-border-color);
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.15);
   font-size: 18px;
   text-align: center;
-  background-color: var(--el-bg-color);
+  background-color: var(--v3-header-bg);
 }
 </style>
