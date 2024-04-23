@@ -7,9 +7,8 @@
 <style lang="scss" scoped>
 footer {
   height: 56px;
-  line-height: 55px;
+  line-height: 56px;
   text-align: center;
   color: var(--el-color-info);
-  border-top: 1px solid var(--el-border-color);
 }
 </style>
