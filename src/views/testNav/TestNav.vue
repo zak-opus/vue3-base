@@ -31,7 +31,8 @@ console.log('testNav')
   .content {
     flex: 1;
     padding: 10px;
-    overflow: auto;
+    /* overflow-y: auto; */
+    overflow-x: hidden;
   }
 }
 </style>

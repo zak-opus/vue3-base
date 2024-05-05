@@ -13,6 +13,8 @@ import elementIcons from '@/components/SvgIcon/svgicon'
 import plugins from './plugins'
 // 自定义指令
 import directive from './directive'
+// 注册全局工具方法
+import { parseTime } from '@/utils'
 
 const app = createApp(App)
 
@@ -21,5 +23,6 @@ app.use(router)
 app.use(plugins)
 app.use(directive)
 app.use(elementIcons)
+app.config.globalProperties.$parseTime = parseTime
 
 app.mount('#app')
